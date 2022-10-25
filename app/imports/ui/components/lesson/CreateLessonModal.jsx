@@ -22,7 +22,7 @@ const CreateLessonModal = ({ lessonModal, sessionModal }) => {
   const { sessionOptions, ready } = useTracker(() => {
     const sessionSubscription = Sessions.subscribeSession();
     const rdy = sessionSubscription.ready();
-    const session = Sessions.find({}, { sort: { title: 1 } }).fetch();
+    const session = Sessions.find({ type: 'Course' }, { sort: { title: 1 } }).fetch();
     const sessionFilter = [];
     selectSessionSetup(sessionFilter, session);
     return {

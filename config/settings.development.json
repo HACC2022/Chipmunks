@@ -22,8 +22,11 @@
   ],
 
   "defaultSession": [
-    { "title": "HTTP vs. HTTPS", "summary": "Difference between HTTP and HTTPS", "type": "Event", "difficulty":  "Basic", "tags":  ["Technology", "Security"], "owner":  "DPPfvScMnvhwCoaj9"},
-    { "title": "SSH", "summary": "What is SSH", "type": "Event", "difficulty":  "Basic", "tags":  ["Technology", "Security"], "owner":  "DPPfvScMnvhwCoaj9"}
+    { "title": "HTTP vs. HTTPS", "summary": "Difference between HTTP and HTTPS", "type": "Event", "difficulty":  "Basic", "tags":  ["Technology", "Security"], "owner":  "DPPfvScMnvhwCoaj9", "date": "2022-10-25T02:29:50.851Z",
+      "startTime": "04:30 pm", "endTime" : "05:00 pm", "location": "UH Manoa"
+    },
+    { "title": "SSH", "summary": "What is SSH", "type": "Event", "difficulty":  "Basic", "tags":  ["Technology", "Security"], "owner":  "DPPfvScMnvhwCoaj9", "date": "2022-10-25T02:29:50.851Z",
+      "startTime": "04:30 pm", "endTime" : "05:00 pm", "location":  "UH Manoa"}
   ],
 
   "defaultLesson": [
