@@ -4,7 +4,7 @@ import { Accordion, Button, Card, Col, Row, Badge } from 'react-bootstrap';
 import SummaryText from './SummaryText';
 
 const ClassesEventItem = ({ eventKey, session }) => (
-  <Card>
+  <Card className="my-4">
     <Card.Body style={eventKey % 2 === 0 ? { backgroundColor: 'whitesmoke' } : { backgroundColor: '#fbfbfb' }}>
       <Row>
         <Col xs={8}>

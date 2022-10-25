@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { _ } from 'meteor/underscore';
-import { Container, Button, ListGroup, InputGroup, Form, Accordion, Card, Tabs, Tab, Row } from 'react-bootstrap';
+import { Container, Button, ListGroup, InputGroup, Form, Accordion, Card, Tabs, Tab, Row, Col } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Roles } from 'meteor/alanning:roles';
 import { Meteor } from 'meteor/meteor';
-import { ChevronDoubleLeft, ChevronDoubleRight, ChevronLeft, ChevronRight, Search } from 'react-bootstrap-icons';
+import { ChevronDoubleLeft, ChevronDoubleRight, ChevronLeft, ChevronRight, Search, Book } from 'react-bootstrap-icons';
 import { PAGE_IDS } from '../utilities/PageIDs';
 import { Sessions } from '../../api/session/SessionCollection';
 import { Lessons } from '../../api/lesson/LessonCollection';
@@ -194,18 +194,23 @@ const Classes = () => {
 
   return (ready ? (
     <Container id={PAGE_IDS.CLASSES_PAGE} className="py-3">
-      <h1>Classes</h1>
       { Roles.userIsInRole(Meteor.userId(), [ROLE.ADMIN]) ? (
-        <div>
-          <Button variant="outline-primary" type="button" onClick={() => setShowCreateSession(true)}>Create Course / Event</Button>
-          <Button variant="outline-primary" type="button" onClick={() => setShowCreateLesson(true)}>Create Lesson</Button>
-
+        <Row>
+          <Col xs={4}>
+            <h1><Book style={{ marginRight: '1em' }} />Classes</h1>
+          </Col>
+          <Col>
+            <div className="text-end">
+              <Button variant="outline-primary" type="button" onClick={() => setShowCreateSession(true)}>Create Course / Event</Button>{' '}
+              <Button variant="outline-primary" type="button" onClick={() => setShowCreateLesson(true)}>Create Lesson</Button>
+            </div>
+          </Col>
           <CreateSessionModal modal={{ show: showCreateSession, setShow: setShowCreateSession }} />
           <CreateLessonModal lessonModal={{ show: showCreateLesson, setShow: setShowCreateLesson }} sessionModal={{ show: showCreateSession, setShow: setShowCreateSession }} />
-        </div>
-      ) : ''}
+        </Row>
+      ) : <h1><Book style={{ marginRight: '1em' }} />Classes</h1>}
 
-      <Card>
+      <Card className="mt-4">
         <ListGroup variant="flush">
           <ListGroup.Item className="p-4">
             <InputGroup>

@@ -10,7 +10,7 @@ const ClassesCourseItem = ({ eventKey, session, lessons }) => {
   const decoratedOnClick = useAccordionButton(eventKey);
 
   return (
-    <Card>
+    <Card className="my-4">
       <Card.Header style={eventKey % 2 === 0 ? { backgroundColor: 'whitesmoke' } : { backgroundColor: '#fbfbfb' }}>
         <Row>
           <Col xs={10} md={11}>
